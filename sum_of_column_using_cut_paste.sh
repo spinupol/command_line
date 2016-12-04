@@ -16,3 +16,8 @@ Garland,Farrell,172000
 1260000 11
 [app_domt_qa@ip-10-131-66-2 sailendra]$ echo $a/$b | bc -l
 114545.45454545454545454545
+
+#Same script in python one-liner
+[app_domt_qa@ip-10-131-66-2 sailendra]$ python -c "import os;print os.system('cut -d"," -f3 tad.csv > fin');print sum([int(s.strip()) for s in open('fin').readlines()])/sum(1 for line in open('fin'))"
+0
+114545
