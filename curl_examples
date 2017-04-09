@@ -1,0 +1,50 @@
+# GET
+$ curl  -H "Accept: application/json" http://localhost:3000/comments
+[
+  {
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }
+]
+
+# POST
+$ curl -H "Content-Type: application/json" -X POST -d '{"id":10,"body":"xyz","postId":11}' http://localhost:3000/comments
+{
+  "id": 10,
+  "body": "xyz",
+  "postId": 11
+}
+
+# PUT
+$ curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X PUT -d '{"id":10,"body":"xyz1","postId":11}' http://localhost:3000/comments
+{}
+pinup@DESKTOP-LAS6GPI /cygdrive/c/users/pinup/Desktop
+$ curl  -H "Accept: application/json" http://localhost:3000/comments
+[
+  {
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  },
+  {
+    "id": 10,
+    "body": "xyz",
+    "postId": 11
+  }
+]
+
+# DELETE
+$ curl -H "Accept: application/json" -X DELETE http://localhost:3000/comments/10
+{}
+
+# GET
+pinup@DESKTOP-LAS6GPI /cygdrive/c/users/pinup/Desktop
+$ curl  -H "Accept: application/json" http://localhost:3000/comments
+[
+  {
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }
+]
