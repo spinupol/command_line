@@ -48,3 +48,7 @@ $ curl  -H "Accept: application/json" http://localhost:3000/comments
     "postId": 1
   }
 ]
+
+# Extract text from website
+curl nagarkanti.org | sed 's/<\/*[^>]*>//g'
+lynx -dump nagarkanti.org
