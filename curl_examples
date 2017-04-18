@@ -52,3 +52,4 @@ $ curl  -H "Accept: application/json" http://localhost:3000/comments
 # Extract text from website
 curl nagarkanti.org | sed 's/<\/*[^>]*>//g'
 lynx -dump nagarkanti.org
+wget -qO- www.nagarkanti.org | sed -e 's/<[^>]*>//g' | sed 's/^ *//; s/ *$//; /^$/d'
